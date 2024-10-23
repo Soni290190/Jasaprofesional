@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jasa Penulisan Kreatif</title>
+    <title>Jasa Pembuatan Skrip Konten</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Custom Styles */
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
-
-        /* Header Section */
-        header {
+        .hero {
             background: url('https://source.unsplash.com/1600x900/?writing') no-repeat center center/cover;
             height: 100vh;
             display: flex;
@@ -25,72 +21,43 @@
             text-align: center;
             position: relative;
         }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        header h1 {
+        .hero h1 {
             font-size: 4rem;
-            z-index: 2;
-            animation: fadeIn 2s ease-in-out;
+            animation: fadeInDown 2s;
         }
-
-        header p {
+        .hero p {
             font-size: 1.5rem;
-            z-index: 2;
             margin-top: 1rem;
-            animation: fadeIn 4s ease-in-out;
+            animation: fadeInUp 3s;
         }
-
-        header .btn {
+        .hero .btn {
             margin-top: 2rem;
-            z-index: 2;
-            animation: slideUp 3s ease-in-out;
+            animation: fadeInUp 3s;
         }
-
-        /* Services Section */
-        #services .card {
-            transition: transform 0.3s ease;
+        .services .card {
+            transition: transform 0.3s;
         }
-
-        #services .card:hover {
-            transform: scale(1.05);
+        .services .card:hover {
+            transform: translateY(-10px);
         }
-
-        /* Footer Section */
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
+        @keyframes fadeInDown {
             from {
                 opacity: 0;
+                transform: translateY(-30px);
             }
             to {
                 opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
                 transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -99,16 +66,13 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Jasa Penulisan</a>
+  <div class="container">
+    <a class="navbar-brand" href="#">Jasa Skrip Konten</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="#services">Layanan</a>
         </li>
@@ -120,41 +84,41 @@
   </div>
 </nav>
 
-<!-- Header Section -->
-<header>
+<!-- Hero Section -->
+<section class="hero">
   <div class="container">
-    <h1>Jasa Penulisan Kreatif</h1>
-    <p>Solusi untuk semua kebutuhan penulisan Anda</p>
+    <h1>Solusi Pembuatan Skrip Konten Anda</h1>
+    <p>Skrip profesional untuk video, podcast, dan iklan yang memikat audiens</p>
     <a href="#services" class="btn btn-outline-light btn-lg">Jelajahi Layanan</a>
   </div>
-</header>
+</section>
 
 <!-- Services Section -->
 <section id="services" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Layanan Kami</h2>
-    <div class="row text-center">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-center h-100">
           <div class="card-body">
-            <h4 class="card-title">Makalah Akademik</h4>
-            <p class="card-text">Pembuatan makalah sesuai standar akademik untuk pelajar dan mahasiswa.</p>
+            <h5 class="card-title">Skrip YouTube</h5>
+            <p class="card-text">Membuat skrip video YouTube yang menarik dan engaging untuk berbagai topik.</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
+      <div class="col-md-4">
+        <div class="card text-center h-100">
           <div class="card-body">
-            <h4 class="card-title">Karya Ilmiah</h4>
-            <p class="card-text">Penulisan skripsi, tesis, dan laporan penelitian dengan kualitas profesional.</p>
+            <h5 class="card-title">Skrip Podcast</h5>
+            <p class="card-text">Menyusun skrip untuk episode podcast, baik untuk narasi atau wawancara.</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
+      <div class="col-md-4">
+        <div class="card text-center h-100">
           <div class="card-body">
-            <h4 class="card-title">Surat Lamaran & CV</h4>
-            <p class="card-text">Buat surat lamaran dan CV profesional untuk memikat perusahaan impian Anda.</p>
+            <h5 class="card-title">Skrip Iklan Digital</h5>
+            <p class="card-text">Skrip promosi untuk iklan di platform sosial media dan Google Ads.</p>
           </div>
         </div>
       </div>
@@ -167,12 +131,12 @@
   <div class="container">
     <h2 class="text-center mb-4">Kontak Kami</h2>
     <div class="row">
-      <div class="col-lg-6 mb-4">
-        <h5>Hubungi Kami</h5>
-        <p>Email: info@jasapenulisan.com</p>
+      <div class="col-md-6 mb-4">
+        <h5>Informasi Kontak</h5>
+        <p>Email: info@jasaskrip.com</p>
         <p>Telepon: +62 812-3456-7890</p>
       </div>
-      <div class="col-lg-6">
+      <div class="col-md-6">
         <h5>Formulir Kontak</h5>
         <form>
           <div class="mb-3">
@@ -186,22 +150,4 @@
           <div class="mb-3">
             <label for="message" class="form-label">Pesan</label>
             <textarea class="form-control" id="message" rows="3" placeholder="Masukkan pesan Anda"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Kirim</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-  <div class="container">
-    <p>&copy; 2024 Jasa Penulisan Kreatif. All rights reserved.</p>
-  </div>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+          </div
